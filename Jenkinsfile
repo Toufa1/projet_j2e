@@ -29,7 +29,7 @@ pipeline {
 
           }
         }
-        stage('Run Docker container on Jenkins') {
+     /*   stage('Run Docker container on Jenkins') {
              
             steps {
                 
@@ -50,7 +50,7 @@ pipeline {
  
               }
           }
-
+*/
 
  }
  
