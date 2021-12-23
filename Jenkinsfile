@@ -14,7 +14,7 @@ pipeline {
           }
         }
  
-   stage('Execute war Maven') {
+ /*  stage('Execute war Maven') {
            steps {
              
                 sh 'mvn package'             
@@ -29,7 +29,7 @@ pipeline {
 
           }
         }
-     /*   stage('Run Docker container on Jenkins') {
+        stage('Run Docker container on Jenkins') {
              
             steps {
                 
