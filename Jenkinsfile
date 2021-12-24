@@ -14,7 +14,7 @@ pipeline {
           }
         }
  
- /*  stage('Execute war Maven') {
+  stage('Execute war Maven') {
            steps {
              
                 sh 'mvn package'             
