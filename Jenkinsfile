@@ -58,7 +58,7 @@ pipeline {
                 sh "docker pull fatoutraore/repo_projet:latest"
                 sh "docker run -d -p 8080:5000 --name projet1 fatoutraore/repo_projet:latest"
                 sleep 2
-                sh 'curl --connect-timeout 3 http://92.222.24.10:8080/projet1'
+                sh 'curl --connect-timeout 3 http://92.222.24.10:8080'
             }
         }
  }
