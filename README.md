@@ -2,5 +2,4 @@
 
 Simple Maven Project
 
-ddd
 
