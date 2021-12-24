@@ -54,7 +54,7 @@ pipeline {
         stage ('pull cointainer') {
             
             steps { 
-                //sh "docker rm 
+                sh "docker rm /projet1"
                 sh "docker pull fatoutraore/repo_projet:latest"
                 sh "docker run -d -p 8080:5000 --name projet1 fatoutraore/repo_projet:latest"
                 sleep 2
