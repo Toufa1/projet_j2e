@@ -6,7 +6,7 @@ pipeline {
     } 
 
  stages {
-      stage('clone') {
+      stage('clone git project') {
            steps {
              
                 git branch: 'master', url: 'https://gitlab.com/Toufa170/projet_j2e.git'
