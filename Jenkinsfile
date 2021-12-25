@@ -57,9 +57,9 @@ pipeline {
                // sh 'docker stop `docker ps | grep 8082 | awk \'{print $1}\'`'
                 sh "docker rm -f /projet1"
                 sh "docker pull fatoutraore/repo_projet:latest"
-                sh "docker run -d -p 8082:8080 --name projet1 fatoutraore/repo_projet:latest"
+                sh "docker run -d -p 8081:8080 --name projet1 fatoutraore/repo_projet:latest"
                 sleep 2
-                sh 'curl --connect-timeout 3 http://92.222.24.10:8082'
+                sh 'curl --connect-timeout 3 http://92.222.24.10:8081'
             }
         }
  }
