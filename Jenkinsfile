@@ -54,8 +54,8 @@ pipeline {
         stage ('pull cointainer') {
             
             steps { 
-                sh 'docker stop `docker ps | grep 8082 | awk \'{print $1}\'`'
-                sh "docker rm /projet1"
+               // sh 'docker stop `docker ps | grep 8082 | awk \'{print $1}\'`'
+                sh "docker rm -f /projet1"
                 sh "docker pull fatoutraore/repo_projet:latest"
                 sh "docker run -d -p 8082:8080 --name projet1 fatoutraore/repo_projet:latest"
                 sleep 2
