@@ -51,7 +51,7 @@ pipeline {
               }
           }
      
-        stage ('pull cointainer') {
+        stage ('pull and run cointainer') {
             
             steps { 
                // sh 'docker stop `docker ps | grep 8082 | awk \'{print $1}\'`'
@@ -59,9 +59,11 @@ pipeline {
                 sh "docker pull fatoutraore/repo_projet:latest"
                 sh "docker run -d -p 8081:8080 --name projet1 fatoutraore/repo_projet:latest"
                 sleep 2
-                sh 'curl --connect-timeout 3 http://92.222.24.10:8081'
+                //sh 'curl --connect-timeout 3 http://92.222.24.10:8081'
             }
         }
+     
+     
  }
  
 }
